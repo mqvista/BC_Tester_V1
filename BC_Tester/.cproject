@@ -46,9 +46,12 @@
 								</option>
 								<option id="com.atollic.truestudio.gcc.directories.select.394717831" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../src"/>
+									<listOptionValue builtIn="false" value="../inc"/>
+									<listOptionValue builtIn="false" value="../inc/LibUSB"/>
 									<listOptionValue builtIn="false" value="../Libraries/STM32F10x_StdPeriph_Driver/inc"/>
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F10x/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32_USB-FS-Device_Lib/inc"/>
 								</option>
 								<option id="com.atollic.truestudio.common_options.target.endianess.1223319647" name="Endianess" superClass="com.atollic.truestudio.common_options.target.endianess" useByScannerDiscovery="false"/>
 								<option id="com.atollic.truestudio.common_options.target.mcpu.862223953" name="Microcontroller" superClass="com.atollic.truestudio.common_options.target.mcpu" useByScannerDiscovery="false" value="STM32F103C8" valueType="enumerated"/>
@@ -77,6 +80,9 @@
 								</option>
 								<option id="com.atollic.truestudio.gpp.directories.select.355438677" name="Include path" superClass="com.atollic.truestudio.gpp.directories.select" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="../src"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32_USB-FS-Device_Lib/inc"/>
+									<listOptionValue builtIn="false" value="../inc/LibUSB"/>
+									<listOptionValue builtIn="false" value="../inc"/>
 									<listOptionValue builtIn="false" value="../Libraries/STM32F10x_StdPeriph_Driver/inc"/>
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F10x/Include"/>
 									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
@@ -91,7 +97,7 @@
 								<option id="com.atollic.truestudio.gpp.optimization.fno_rtti.1196269907" name="Disable RTTI" superClass="com.atollic.truestudio.gpp.optimization.fno_rtti" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.atollic.truestudio.gpp.optimization.fno_exceptions.2125853398" name="Disable exception handling" superClass="com.atollic.truestudio.gpp.optimization.fno_exceptions" useByScannerDiscovery="false" value="true" valueType="boolean"/>
 								<option id="com.atollic.truestudio.common_options.target.interwork.1295493756" name="Mix ARM/Thumb" superClass="com.atollic.truestudio.common_options.target.interwork" useByScannerDiscovery="false"/>
-								<option id="com.atollic.truestudio.gpp.cppstandard.25086494" superClass="com.atollic.truestudio.gpp.cppstandard" useByScannerDiscovery="false" value="com.atollic.truestudio.gpp.cppstandard.gnupp14" valueType="enumerated"/>
+								<option id="com.atollic.truestudio.gpp.cppstandard.25086494" name="C++ standard" superClass="com.atollic.truestudio.gpp.cppstandard" useByScannerDiscovery="false" value="com.atollic.truestudio.gpp.cppstandard.gnupp14" valueType="enumerated"/>
 								<inputType id="com.atollic.truestudio.gpp.input.1594958282" superClass="com.atollic.truestudio.gpp.input"/>
 							</tool>
 							<tool id="com.atollic.truestudio.exe.debug.toolchain.ldcc.1489837116" name="C++ Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ldcc">
@@ -110,6 +116,80 @@
 							</tool>
 							<tool id="com.atollic.truestudio.ar.base.1544117879" name="Archiver" superClass="com.atollic.truestudio.ar.base"/>
 							<tool id="com.atollic.truestudio.exe.debug.toolchain.secoutput.1450589223" name="Other" superClass="com.atollic.truestudio.exe.debug.toolchain.secoutput"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.atollic.truestudio.exe.debug.1304651649.1371617424" name="/" resourcePath="Libraries/STM32_USB-FS-Device_Lib">
+						<toolChain id="com.atollic.truestudio.exe.debug.toolchain.1481182428" name="Atollic ARM Tools" superClass="com.atollic.truestudio.exe.debug.toolchain" unusedChildren="">
+							<option id="com.atollic.truestudio.general.runtimelib.1636566155.1883386217" name="Runtime Library" superClass="com.atollic.truestudio.general.runtimelib.1636566155"/>
+							<option id="com.atollic.truestudio.toolchain_options.mcu.2007111532.398869307" name="Microcontroller" superClass="com.atollic.truestudio.toolchain_options.mcu.2007111532"/>
+							<option id="com.atollic.truestudio.toolchain_options.vendor.947631205.1483369165" name="Vendor name" superClass="com.atollic.truestudio.toolchain_options.vendor.947631205"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.atollic.truestudio.exe.debug.toolchain.platform" isAbstract="false" name="Debug platform" osList="all" superClass="com.atollic.truestudio.exe.debug.toolchain.platform"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.as.1557871460" name="Assembler" superClass="com.atollic.truestudio.exe.debug.toolchain.as.395649353">
+								<inputType id="com.atollic.truestudio.as.input.723006679" name="Input" superClass="com.atollic.truestudio.as.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.gcc.1979523001" name="C Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gcc.447345478">
+								<option id="com.atollic.truestudio.gcc.directories.select.951839504" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../src"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32F10x_StdPeriph_Driver/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32_USB-FS-Device_Lib/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F10x/Include"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
+								</option>
+								<inputType id="com.atollic.truestudio.gcc.input.14153387" superClass="com.atollic.truestudio.gcc.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.ld.1962588821" name="C Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ld.1235700696"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.gpp.870932231" name="C++ Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gpp.452009998">
+								<option id="com.atollic.truestudio.gpp.directories.select.2006524624" name="Include path" superClass="com.atollic.truestudio.gpp.directories.select" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../src"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32_USB-FS-Device_Lib/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32F10x_StdPeriph_Driver/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F10x/Include"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
+								</option>
+								<inputType id="com.atollic.truestudio.gpp.input.358260456" superClass="com.atollic.truestudio.gpp.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.ldcc.855144517" name="C++ Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ldcc.1489837116"/>
+							<tool id="com.atollic.truestudio.ar.base.360159783" name="Archiver" superClass="com.atollic.truestudio.ar.base.1544117879"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.secoutput.2087412989" name="Other" superClass="com.atollic.truestudio.exe.debug.toolchain.secoutput.1450589223"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.atollic.truestudio.exe.debug.1304651649.891485605" name="/" resourcePath="inc/LibUSB">
+						<toolChain id="com.atollic.truestudio.exe.debug.toolchain.1718382030" name="Atollic ARM Tools" superClass="com.atollic.truestudio.exe.debug.toolchain" unusedChildren="">
+							<option id="com.atollic.truestudio.general.runtimelib.1636566155.653879517" name="Runtime Library" superClass="com.atollic.truestudio.general.runtimelib.1636566155"/>
+							<option id="com.atollic.truestudio.toolchain_options.mcu.2007111532.2756353" name="Microcontroller" superClass="com.atollic.truestudio.toolchain_options.mcu.2007111532"/>
+							<option id="com.atollic.truestudio.toolchain_options.vendor.947631205.364551097" name="Vendor name" superClass="com.atollic.truestudio.toolchain_options.vendor.947631205"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.atollic.truestudio.exe.debug.toolchain.platform" isAbstract="false" name="Debug platform" osList="all" superClass="com.atollic.truestudio.exe.debug.toolchain.platform"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.as.1673731930" name="Assembler" superClass="com.atollic.truestudio.exe.debug.toolchain.as.395649353">
+								<inputType id="com.atollic.truestudio.as.input.1566365971" name="Input" superClass="com.atollic.truestudio.as.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.gcc.276843579" name="C Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gcc.447345478">
+								<option id="com.atollic.truestudio.gcc.directories.select.180033508" name="Include path" superClass="com.atollic.truestudio.gcc.directories.select" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../src"/>
+									<listOptionValue builtIn="false" value="../inc"/>
+									<listOptionValue builtIn="false" value="../src/USB_User_Lib/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32F10x_StdPeriph_Driver/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F10x/Include"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32_USB-FS-Device_Lib/inc"/>
+								</option>
+								<inputType id="com.atollic.truestudio.gcc.input.2039331927" superClass="com.atollic.truestudio.gcc.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.ld.1542310668" name="C Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ld.1235700696"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.gpp.1805442794" name="C++ Compiler" superClass="com.atollic.truestudio.exe.debug.toolchain.gpp.452009998">
+								<option id="com.atollic.truestudio.gpp.directories.select.722370365" name="Include path" superClass="com.atollic.truestudio.gpp.directories.select" useByScannerDiscovery="false" valueType="includePath">
+									<listOptionValue builtIn="false" value="../src"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32_USB-FS-Device_Lib/inc"/>
+									<listOptionValue builtIn="false" value="../inc"/>
+									<listOptionValue builtIn="false" value="../src/USB_User_Lib/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/STM32F10x_StdPeriph_Driver/inc"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Device/ST/STM32F10x/Include"/>
+									<listOptionValue builtIn="false" value="../Libraries/CMSIS/Include"/>
+								</option>
+								<inputType id="com.atollic.truestudio.gpp.input.153717556" superClass="com.atollic.truestudio.gpp.input"/>
+							</tool>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.ldcc.1992016195" name="C++ Linker" superClass="com.atollic.truestudio.exe.debug.toolchain.ldcc.1489837116"/>
+							<tool id="com.atollic.truestudio.ar.base.1577850237" name="Archiver" superClass="com.atollic.truestudio.ar.base.1544117879"/>
+							<tool id="com.atollic.truestudio.exe.debug.toolchain.secoutput.1936486704" name="Other" superClass="com.atollic.truestudio.exe.debug.toolchain.secoutput.1450589223"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>

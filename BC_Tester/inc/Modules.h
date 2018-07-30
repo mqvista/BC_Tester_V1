@@ -17,6 +17,10 @@
 #include "Button.h"
 #include "LibSenser.h"
 
+#include "hw_config.h"
+#include "usb_init.h"
+
+
 class Modules {
 public:
 	static Modules *Instance();

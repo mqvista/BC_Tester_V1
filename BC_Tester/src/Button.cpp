@@ -77,18 +77,37 @@ void Button::Button_Nvic_Init() {
 
 extern "C" {
 void EXTI15_10_IRQHandler(void) {
-
+	// 判断开机按键
 	if (EXTI_GetITStatus(EXTI_Line14) != RESET) {
+
 		if (GPIO_ReadInputDataBit(GPIOB, Key1) != RESET) {
 			Modules::Instance()->utick.Wait(1);
 			if (GPIO_ReadInputDataBit(GPIOB, Key1) != RESET)
+			{
+				//关闭背光和系统电源
+				GPIO_ResetBits(GPIOB, GPIO_Pin_1);
 				GPIO_ResetBits(GPIOB, PWR_ON);
+			}
 		}
 		EXTI_ClearITPendingBit(EXTI_Line14);
 	}
+	// 公英制式切换
 	if (EXTI_GetITStatus(EXTI_Line13) != RESET) {
+		if (GPIO_ReadInputDataBit(GPIOB, Key2) == RESET)
+		{
+			if (Modules::Instance()->libSenser.getInchStatus() == 0)
+			{
+				Modules::Instance()->libSenser.unitConvery();
+			}
+			else
+			{
+				Modules::Instance()->libSenser.unitConvery();
+			}
+
+		}
 		EXTI_ClearITPendingBit(EXTI_Line13);
 	}
+	//设定数据置零
 	if (EXTI_GetITStatus(EXTI_Line12) != RESET) {
 		if (GPIO_ReadInputDataBit(GPIOB, Key3) == RESET) {
 			Modules::Instance()->libSenser.real_value_offset_zero();

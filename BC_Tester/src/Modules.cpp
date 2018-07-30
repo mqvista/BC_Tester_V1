@@ -22,6 +22,11 @@ void Modules::Init() {
 	ili9341.Init();
 	ili9341.LCD_Clean(0x0000);
 	battery.Init();
+
+	Set_System();
+	Set_USBClock();
+	USB_Interrupts_Config();
+	USB_Init();
 }
 
 Modules* Modules::Instance() {
